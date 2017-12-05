@@ -47,11 +47,11 @@ struct TeleopTwistJoy::Impl
 {
   void joyCallback(const sensor_msgs::msg::Joy::SharedPtr joy);
 
-  rclcpp::node::Node::SharedPtr node;
-  rclcpp::parameter_service::ParameterService::SharedPtr parameter_service;
+  rclcpp::Node::SharedPtr node;
+  rclcpp::ParameterService::SharedPtr parameter_service;
 
-  rclcpp::publisher::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub;
-  rclcpp::subscription::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub;
+  rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub;
+  rclcpp::Subscription<sensor_msgs::msg::Joy>::SharedPtr joy_sub;
 
   int enable_button;
   int enable_turbo_button;
@@ -72,7 +72,7 @@ struct TeleopTwistJoy::Impl
  * \param nh NodeHandle to use for setting up the publisher and subscriber.
  * \param nh_param NodeHandle to use for searching for configuration parameters.
  */
-TeleopTwistJoy::TeleopTwistJoy(rclcpp::node::Node::SharedPtr & node)
+TeleopTwistJoy::TeleopTwistJoy(rclcpp::Node::SharedPtr & node)
 {
   pimpl_ = new Impl();
 
@@ -84,7 +84,7 @@ TeleopTwistJoy::TeleopTwistJoy(rclcpp::node::Node::SharedPtr & node)
     std::bind(&TeleopTwistJoy::Impl::joyCallback, this->pimpl_, std::placeholders::_1),
     rmw_qos_profile_sensor_data);
 
-  pimpl_->parameter_service = std::make_shared<rclcpp::parameter_service::ParameterService>(node);
+  pimpl_->parameter_service = std::make_shared<rclcpp::ParameterService>(node);
 
   pimpl_->enable_button = 5;
   node->get_parameter("enable_button", pimpl_->enable_button);
