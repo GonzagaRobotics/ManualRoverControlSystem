@@ -2,6 +2,16 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* ParameterService auto started (`#7 <https://github.com/ros2/teleop_twist_joy/issues/7>`_)
+* Contributors: Shane Loretz
+
+2.0.0 (2017-12-08)
+------------------
+* Initial port to ROS2
+* Contributors: Chris Lalancette, Mikael Arguedas, Deanna Hood
+
 0.1.2 (2016-08-31)
 ------------------
 * Fixed incorrect key. (`#21 <https://github.com/ros-teleop/teleop_twist_joy/issues/21>`_)
