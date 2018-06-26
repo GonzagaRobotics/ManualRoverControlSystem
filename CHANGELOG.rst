@@ -2,8 +2,8 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2018-06-26)
+------------------
 * ParameterService auto started (`#7 <https://github.com/ros2/teleop_twist_joy/issues/7>`_)
 * Contributors: Shane Loretz
 
