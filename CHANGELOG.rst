@@ -2,8 +2,8 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.1 (2019-02-08)
+------------------
 * Add in the ability to control via parameters (`#8 <https://github.com/ros2/teleop_twist_joy/issues/8>`_)
 * Contributors: Chris Lalancette
 
