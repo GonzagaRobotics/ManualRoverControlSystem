@@ -2,8 +2,8 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.0 (2019-05-31)
+------------------
 * Fix parameters so things actually work in Dashing. (`#9 <https://github.com/ros2/teleop_twist_joy/issues/9>`_)
 * Contributors: Chris Lalancette
 
