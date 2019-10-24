@@ -2,8 +2,8 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.2 (2019-10-23)
+------------------
 * Export interfaces for Shared Lib on Windows.
 * Make teleop_twist_joy composable.
 * Reenable cppcheck.
