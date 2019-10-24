@@ -2,6 +2,16 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Export interfaces for Shared Lib on Windows.
+* Make teleop_twist_joy composable.
+* Reenable cppcheck.
+* Rename teleop_twist_joy.h to teleop_twist_joy.hpp
+* Get some basic tests running (`#10 <https://github.com/ros2/teleop_twist_joy/issues/10>`_)
+* Port config and launch to ROS 2 (`#11 <https://github.com/ros2/teleop_twist_joy/issues/11>`_)
+* Contributors: Chris Lalancette, Scott K Logan, seanyen
+
 2.2.0 (2019-05-31)
 ------------------
 * Fix parameters so things actually work in Dashing. (`#9 <https://github.com/ros2/teleop_twist_joy/issues/9>`_)
