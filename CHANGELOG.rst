@@ -2,6 +2,11 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Make Parameters dynamic (`#16 <https://github.com/ros2/teleop_twist_joy/issues/16>`_)
+* Contributors: aravindsrj
+
 2.2.2 (2019-10-23)
 ------------------
 * Export interfaces for Shared Lib on Windows.
