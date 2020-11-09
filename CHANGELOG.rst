@@ -2,8 +2,8 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.4.0 (2020-11-09)
+------------------
 * Switch to modern ReadyToTest for the tests.
 * Switch from node_executable -> executable for Foxy.
 * Update README for Ros2 (`#17 <https://github.com/ros2/teleop_twist_joy/issues/17>`_) (`#18 <https://github.com/ros2/teleop_twist_joy/issues/18>`_)
