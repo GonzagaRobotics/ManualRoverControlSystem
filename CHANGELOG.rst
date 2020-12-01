@@ -2,6 +2,11 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add parameter to enable/disable requiring the enable button to be held for motion (`#21 <https://github.com/ros2/teleop_twist_joy/issues/21>`_)
+* Contributors: Chris Lalancette, kgibsonjca
+
 2.4.0 (2020-11-09)
 ------------------
 * Switch to modern ReadyToTest for the tests.
