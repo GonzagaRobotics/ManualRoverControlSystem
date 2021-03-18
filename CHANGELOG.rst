@@ -2,6 +2,11 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update README to reflect changes to config parameters. (fixes `#23 <https://github.com/ros2/teleop_twist_joy/issues/23>`_) (`#24 <https://github.com/ros2/teleop_twist_joy/issues/24>`_)
+* Contributors: Josh Newans
+
 2.4.1 (2020-12-01)
 ------------------
 * Add parameter to enable/disable requiring the enable button to be held for motion (`#21 <https://github.com/ros2/teleop_twist_joy/issues/21>`_)
