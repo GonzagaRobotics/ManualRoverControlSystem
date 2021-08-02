@@ -2,8 +2,8 @@
 Changelog for package teleop_twist_joy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.4.3 (2021-08-02)
+------------------
 * Fix the launch file to use 'executable'. (`#28 <https://github.com/ros2/teleop_twist_joy/issues/28>`_)
 * fix launch notation (`#26 <https://github.com/ros2/teleop_twist_joy/issues/26>`_)
 * Contributors: Chris Lalancette, Shigeki Kobayashi
