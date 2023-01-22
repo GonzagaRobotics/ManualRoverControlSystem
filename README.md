@@ -8,7 +8,7 @@ Steps to connect microcontroller to ROS2:
 
 * Plug microcontroller into Jetson over USB
 *(Optional) You might need to change the permissions on the USB to allow it to communicate. If so, figure out what the connection is by entering lsusb -l /dev/tty* Then, sudo chmod 666 /dev/'connection name'
-*source install/local_setup.bash
+* source install/local_setup.bash
 * ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/'connection name'
 * Press the enable button on the microcontroller
 * You should now be able to see the microcontroller's nodes and topics using ros2 topic list and ros2 node list.
