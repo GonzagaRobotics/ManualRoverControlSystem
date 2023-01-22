@@ -2,7 +2,7 @@
 A repository for developing the User Interface for receiving data and controlling the rover
 
 ## Microcontroller Connection Instructions
-These instructions assume the micro_ros_agent is already created. To do this, follow the instructions on this link under Creating the micro-ROS agent https://micro.ros.org/docs/tutorials/core/first_application_linux/
+These instructions assume the micro_ros_agent is already created on the host machine. To do this, follow the instructions on this link under Creating the micro-ROS agent https://micro.ros.org/docs/tutorials/core/first_application_linux/
 
 Steps to connect microcontroller to ROS2:
 
