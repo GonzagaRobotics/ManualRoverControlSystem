@@ -2,7 +2,7 @@
 A repository for developing the User Interface for receiving data and controlling the rover
 
 
-## Packages Info:
+## Packages Info
 
 ### command_broker:
 * Command: `ros2 run command_broker XboxBroker`
