@@ -1,0 +1,396 @@
+[0.000000] (-) TimerEvent: {}
+[0.002992] (teleop_twist_joy) JobQueued: {'identifier': 'teleop_twist_joy', 'dependencies': OrderedDict()}
+[0.004319] (teleop_twist_joy) JobStarted: {'identifier': 'teleop_twist_joy'}
+[0.040759] (teleop_twist_joy) JobProgress: {'identifier': 'teleop_twist_joy', 'progress': 'cmake'}
+[0.041153] (teleop_twist_joy) Command: {'cmd': ['/usr/bin/cmake', '/home/nick/ros_ws/src/teleop_twist_joy', '-DCMAKE_INSTALL_PREFIX=/home/nick/ros_ws/src/teleop_twist_joy/install/teleop_twist_joy'], 'cwd': '/home/nick/ros_ws/src/teleop_twist_joy/build/teleop_twist_joy', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nick'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nick'), ('OLDPWD', '/home/nick/ros_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1603'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nick'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nick'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nick-MacBookPro:@/tmp/.ICE-unix/1585,unix/nick-MacBookPro:/tmp/.ICE-unix/1585'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/004060d7_966c_443b_a6dd_77419db7b074'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.N1FVY1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.4346'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nick/ros_ws/src/teleop_twist_joy/build/teleop_twist_joy'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099464] (-) TimerEvent: {}
+[0.200045] (-) TimerEvent: {}
+[0.300079] (teleop_twist_joy) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.300595] (-) TimerEvent: {}
+[0.402073] (-) TimerEvent: {}
+[0.502939] (-) TimerEvent: {}
+[0.525130] (teleop_twist_joy) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.546755] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.603118] (-) TimerEvent: {}
+[0.703753] (-) TimerEvent: {}
+[0.741710] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.772983] (teleop_twist_joy) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.774617] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.776605] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.790434] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.803914] (-) TimerEvent: {}
+[0.910503] (-) TimerEvent: {}
+[1.011309] (-) TimerEvent: {}
+[1.068729] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.101385] (teleop_twist_joy) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.102220] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.103737] (teleop_twist_joy) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.111444] (-) TimerEvent: {}
+[1.117000] (teleop_twist_joy) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.211607] (-) TimerEvent: {}
+[1.312122] (-) TimerEvent: {}
+[1.412950] (-) TimerEvent: {}
+[1.513756] (-) TimerEvent: {}
+[1.613600] (teleop_twist_joy) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[1.614034] (-) TimerEvent: {}
+[1.714724] (-) TimerEvent: {}
+[1.815279] (-) TimerEvent: {}
+[1.915890] (-) TimerEvent: {}
+[1.925159] (teleop_twist_joy) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.2 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[2.016090] (-) TimerEvent: {}
+[2.039656] (teleop_twist_joy) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.055847] (teleop_twist_joy) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.082353] (teleop_twist_joy) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.116241] (-) TimerEvent: {}
+[2.129327] (teleop_twist_joy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.196545] (teleop_twist_joy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.216405] (-) TimerEvent: {}
+[2.317161] (-) TimerEvent: {}
+[2.417687] (-) TimerEvent: {}
+[2.518284] (-) TimerEvent: {}
+[2.619127] (-) TimerEvent: {}
+[2.718641] (teleop_twist_joy) StdoutLine: {'line': b'-- Found rclcpp: 16.0.2 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[2.719214] (-) TimerEvent: {}
+[2.819683] (-) TimerEvent: {}
+[2.920231] (-) TimerEvent: {}
+[2.926385] (teleop_twist_joy) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.933011] (teleop_twist_joy) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.020397] (-) TimerEvent: {}
+[3.120957] (-) TimerEvent: {}
+[3.206855] (teleop_twist_joy) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[3.221110] (-) TimerEvent: {}
+[3.277313] (teleop_twist_joy) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[3.321277] (-) TimerEvent: {}
+[3.410729] (teleop_twist_joy) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.421417] (-) TimerEvent: {}
+[3.436571] (teleop_twist_joy) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[3.521599] (-) TimerEvent: {}
+[3.622151] (-) TimerEvent: {}
+[3.707748] (teleop_twist_joy) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.709331] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.722545] (-) TimerEvent: {}
+[3.823324] (-) TimerEvent: {}
+[3.923914] (-) TimerEvent: {}
+[3.993313] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[3.997358] (teleop_twist_joy) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.024079] (-) TimerEvent: {}
+[4.125513] (-) TimerEvent: {}
+[4.226617] (-) TimerEvent: {}
+[4.327613] (-) TimerEvent: {}
+[4.428296] (-) TimerEvent: {}
+[4.528850] (-) TimerEvent: {}
+[4.585504] (teleop_twist_joy) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.2 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[4.629012] (-) TimerEvent: {}
+[4.729557] (-) TimerEvent: {}
+[4.830113] (-) TimerEvent: {}
+[4.930684] (-) TimerEvent: {}
+[4.949877] (teleop_twist_joy) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[5.030849] (-) TimerEvent: {}
+[5.131400] (-) TimerEvent: {}
+[5.231959] (-) TimerEvent: {}
+[5.329249] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY\n'}
+[5.332061] (-) TimerEvent: {}
+[5.433029] (-) TimerEvent: {}
+[5.533620] (-) TimerEvent: {}
+[5.557381] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success\n'}
+[5.559953] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY\n'}
+[5.634590] (-) TimerEvent: {}
+[5.735365] (-) TimerEvent: {}
+[5.837342] (-) TimerEvent: {}
+[5.900317] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success\n'}
+[5.905641] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test COMPILER_HAS_DEPRECATED_ATTR\n'}
+[5.937507] (-) TimerEvent: {}
+[6.038433] (-) TimerEvent: {}
+[6.139392] (-) TimerEvent: {}
+[6.200490] (teleop_twist_joy) StdoutLine: {'line': b'-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success\n'}
+[6.213259] (teleop_twist_joy) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[6.239524] (-) TimerEvent: {}
+[6.340253] (-) TimerEvent: {}
+[6.440799] (-) TimerEvent: {}
+[6.533303] (teleop_twist_joy) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[6.540982] (-) TimerEvent: {}
+[6.602035] (teleop_twist_joy) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") \n'}
+[6.620121] (teleop_twist_joy) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") \n'}
+[6.621152] (teleop_twist_joy) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.621641] (teleop_twist_joy) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.622148] (teleop_twist_joy) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[6.641106] (-) TimerEvent: {}
+[6.713202] (teleop_twist_joy) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[6.741303] (-) TimerEvent: {}
+[6.814548] (teleop_twist_joy) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[6.815144] (teleop_twist_joy) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/nick/ros_ws/src/teleop_twist_joy/build/teleop_twist_joy>;$<BUILD_INTERFACE:/home/nick/ros_ws/src/teleop_twist_joy/include>\n'}
+[6.815571] (teleop_twist_joy) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[6.819890] (teleop_twist_joy) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[6.827001] (teleop_twist_joy) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.831563] (teleop_twist_joy) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[6.836695] (teleop_twist_joy) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.841429] (-) TimerEvent: {}
+[6.853277] (teleop_twist_joy) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.863275] (teleop_twist_joy) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:20 (add_library):\n'}
+[6.863796] (teleop_twist_joy) StderrLine: {'line': b'  Policy CMP0115 is not set: Source file extensions must be explicit.  Run\n'}
+[6.864060] (teleop_twist_joy) StderrLine: {'line': b'  "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy\n'}
+[6.864318] (teleop_twist_joy) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[6.864575] (teleop_twist_joy) StderrLine: {'line': b'\n'}
+[6.864829] (teleop_twist_joy) StderrLine: {'line': b'  File:\n'}
+[6.865082] (teleop_twist_joy) StderrLine: {'line': b'\n'}
+[6.865334] (teleop_twist_joy) StderrLine: {'line': b'    /home/nick/ros_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp\n'}
+[6.865589] (teleop_twist_joy) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[6.865844] (teleop_twist_joy) StderrLine: {'line': b'\x1b[0m\n'}
+[6.919426] (teleop_twist_joy) StdoutLine: {'line': b'-- Generating done\n'}
+[6.929526] (teleop_twist_joy) StdoutLine: {'line': b'-- Build files have been written to: /home/nick/ros_ws/src/teleop_twist_joy/build/teleop_twist_joy\n'}
+[6.941631] (-) TimerEvent: {}
+[6.967468] (teleop_twist_joy) CommandEnded: {'returncode': 0}
+[6.969758] (teleop_twist_joy) JobProgress: {'identifier': 'teleop_twist_joy', 'progress': 'build'}
+[6.969909] (teleop_twist_joy) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nick/ros_ws/src/teleop_twist_joy/build/teleop_twist_joy', '--', '-j2', '-l2'], 'cwd': '/home/nick/ros_ws/src/teleop_twist_joy/build/teleop_twist_joy', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'nick'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nick'), ('OLDPWD', '/home/nick/ros_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1603'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nick'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nick'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nick-MacBookPro:@/tmp/.ICE-unix/1585,unix/nick-MacBookPro:/tmp/.ICE-unix/1585'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/004060d7_966c_443b_a6dd_77419db7b074'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.N1FVY1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.4346'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nick/ros_ws/src/teleop_twist_joy/build/teleop_twist_joy'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[7.041798] (-) TimerEvent: {}
+[7.140068] (teleop_twist_joy) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o\x1b[0m\n'}
+[7.141951] (-) TimerEvent: {}
+[7.242665] (-) TimerEvent: {}
+[7.343256] (-) TimerEvent: {}
+[7.446136] (-) TimerEvent: {}
+[7.546796] (-) TimerEvent: {}
+[7.647449] (-) TimerEvent: {}
+[7.748091] (-) TimerEvent: {}
+[7.848687] (-) TimerEvent: {}
+[7.949448] (-) TimerEvent: {}
+[8.056760] (-) TimerEvent: {}
+[8.158087] (-) TimerEvent: {}
+[8.259068] (-) TimerEvent: {}
+[8.359843] (-) TimerEvent: {}
+[8.464006] (-) TimerEvent: {}
+[8.564817] (-) TimerEvent: {}
+[8.665585] (-) TimerEvent: {}
+[8.766439] (-) TimerEvent: {}
+[8.867228] (-) TimerEvent: {}
+[8.968049] (-) TimerEvent: {}
+[9.068842] (-) TimerEvent: {}
+[9.169644] (-) TimerEvent: {}
+[9.270462] (-) TimerEvent: {}
+[9.371155] (-) TimerEvent: {}
+[9.472012] (-) TimerEvent: {}
+[9.572824] (-) TimerEvent: {}
+[9.673638] (-) TimerEvent: {}
+[9.774316] (-) TimerEvent: {}
+[9.874920] (-) TimerEvent: {}
+[9.975568] (-) TimerEvent: {}
+[10.076150] (-) TimerEvent: {}
+[10.176922] (-) TimerEvent: {}
+[10.278385] (-) TimerEvent: {}
+[10.381167] (-) TimerEvent: {}
+[10.482091] (-) TimerEvent: {}
+[10.583003] (-) TimerEvent: {}
+[10.683802] (-) TimerEvent: {}
+[10.784776] (-) TimerEvent: {}
+[10.886533] (-) TimerEvent: {}
+[10.987319] (-) TimerEvent: {}
+[11.088184] (-) TimerEvent: {}
+[11.189053] (-) TimerEvent: {}
+[11.290029] (-) TimerEvent: {}
+[11.391686] (-) TimerEvent: {}
+[11.492458] (-) TimerEvent: {}
+[11.593236] (-) TimerEvent: {}
+[11.694119] (-) TimerEvent: {}
+[11.795023] (-) TimerEvent: {}
+[11.895803] (-) TimerEvent: {}
+[11.996599] (-) TimerEvent: {}
+[12.098653] (-) TimerEvent: {}
+[12.199410] (-) TimerEvent: {}
+[12.300189] (-) TimerEvent: {}
+[12.400973] (-) TimerEvent: {}
+[12.501795] (-) TimerEvent: {}
+[12.602583] (-) TimerEvent: {}
+[12.703355] (-) TimerEvent: {}
+[12.804396] (-) TimerEvent: {}
+[12.905436] (-) TimerEvent: {}
+[13.006282] (-) TimerEvent: {}
+[13.107165] (-) TimerEvent: {}
+[13.207982] (-) TimerEvent: {}
+[13.308821] (-) TimerEvent: {}
+[13.409610] (-) TimerEvent: {}
+[13.510224] (-) TimerEvent: {}
+[13.610802] (-) TimerEvent: {}
+[13.711370] (-) TimerEvent: {}
+[13.811941] (-) TimerEvent: {}
+[13.912510] (-) TimerEvent: {}
+[14.013107] (-) TimerEvent: {}
+[14.113673] (-) TimerEvent: {}
+[14.214266] (-) TimerEvent: {}
+[14.314840] (-) TimerEvent: {}
+[14.415414] (-) TimerEvent: {}
+[14.515996] (-) TimerEvent: {}
+[14.616561] (-) TimerEvent: {}
+[14.717117] (-) TimerEvent: {}
+[14.817683] (-) TimerEvent: {}
+[14.918284] (-) TimerEvent: {}
+[15.018849] (-) TimerEvent: {}
+[15.119418] (-) TimerEvent: {}
+[15.220012] (-) TimerEvent: {}
+[15.320585] (-) TimerEvent: {}
+[15.421178] (-) TimerEvent: {}
+[15.521774] (-) TimerEvent: {}
+[15.622571] (-) TimerEvent: {}
+[15.723341] (-) TimerEvent: {}
+[15.824116] (-) TimerEvent: {}
+[15.924904] (-) TimerEvent: {}
+[16.025686] (-) TimerEvent: {}
+[16.126532] (-) TimerEvent: {}
+[16.227345] (-) TimerEvent: {}
+[16.328138] (-) TimerEvent: {}
+[16.428937] (-) TimerEvent: {}
+[16.529756] (-) TimerEvent: {}
+[16.630543] (-) TimerEvent: {}
+[16.731328] (-) TimerEvent: {}
+[16.832140] (-) TimerEvent: {}
+[16.932930] (-) TimerEvent: {}
+[17.033705] (-) TimerEvent: {}
+[17.134549] (-) TimerEvent: {}
+[17.235326] (-) TimerEvent: {}
+[17.336114] (-) TimerEvent: {}
+[17.436918] (-) TimerEvent: {}
+[17.537540] (-) TimerEvent: {}
+[17.638103] (-) TimerEvent: {}
+[17.738688] (-) TimerEvent: {}
+[17.839252] (-) TimerEvent: {}
+[17.939814] (-) TimerEvent: {}
+[18.040386] (-) TimerEvent: {}
+[18.140946] (-) TimerEvent: {}
+[18.241570] (-) TimerEvent: {}
+[18.342237] (-) TimerEvent: {}
+[18.442823] (-) TimerEvent: {}
+[18.543464] (-) TimerEvent: {}
+[18.644357] (-) TimerEvent: {}
+[18.745172] (-) TimerEvent: {}
+[18.846059] (-) TimerEvent: {}
+[18.946897] (-) TimerEvent: {}
+[19.047725] (-) TimerEvent: {}
+[19.148550] (-) TimerEvent: {}
+[19.249309] (-) TimerEvent: {}
+[19.350144] (-) TimerEvent: {}
+[19.450979] (-) TimerEvent: {}
+[19.551746] (-) TimerEvent: {}
+[19.652835] (-) TimerEvent: {}
+[19.753727] (-) TimerEvent: {}
+[19.854597] (-) TimerEvent: {}
+[19.955209] (-) TimerEvent: {}
+[20.055768] (-) TimerEvent: {}
+[20.156337] (-) TimerEvent: {}
+[20.256950] (-) TimerEvent: {}
+[20.357659] (-) TimerEvent: {}
+[20.458244] (-) TimerEvent: {}
+[20.558928] (-) TimerEvent: {}
+[20.659513] (-) TimerEvent: {}
+[20.760076] (-) TimerEvent: {}
+[20.860745] (-) TimerEvent: {}
+[20.961358] (-) TimerEvent: {}
+[21.062120] (-) TimerEvent: {}
+[21.162923] (-) TimerEvent: {}
+[21.263729] (-) TimerEvent: {}
+[21.364526] (-) TimerEvent: {}
+[21.465552] (-) TimerEvent: {}
+[21.566327] (-) TimerEvent: {}
+[21.667025] (-) TimerEvent: {}
+[21.767786] (-) TimerEvent: {}
+[21.868593] (-) TimerEvent: {}
+[21.969397] (-) TimerEvent: {}
+[22.070248] (-) TimerEvent: {}
+[22.171070] (-) TimerEvent: {}
+[22.271643] (-) TimerEvent: {}
+[22.372452] (-) TimerEvent: {}
+[22.473017] (-) TimerEvent: {}
+[22.573591] (-) TimerEvent: {}
+[22.674167] (-) TimerEvent: {}
+[22.775177] (-) TimerEvent: {}
+[22.875995] (-) TimerEvent: {}
+[22.976779] (-) TimerEvent: {}
+[23.077562] (-) TimerEvent: {}
+[23.178331] (-) TimerEvent: {}
+[23.279100] (-) TimerEvent: {}
+[23.379896] (-) TimerEvent: {}
+[23.480666] (-) TimerEvent: {}
+[23.581435] (-) TimerEvent: {}
+[23.682226] (-) TimerEvent: {}
+[23.782991] (-) TimerEvent: {}
+[23.883753] (-) TimerEvent: {}
+[23.984530] (-) TimerEvent: {}
+[24.085309] (-) TimerEvent: {}
+[24.186136] (-) TimerEvent: {}
+[24.286728] (-) TimerEvent: {}
+[24.387544] (-) TimerEvent: {}
+[24.488388] (-) TimerEvent: {}
+[24.589240] (-) TimerEvent: {}
+[24.690045] (-) TimerEvent: {}
+[24.790856] (-) TimerEvent: {}
+[24.891623] (-) TimerEvent: {}
+[24.992401] (-) TimerEvent: {}
+[25.093023] (-) TimerEvent: {}
+[25.193608] (-) TimerEvent: {}
+[25.294216] (-) TimerEvent: {}
+[25.394790] (-) TimerEvent: {}
+[25.495365] (-) TimerEvent: {}
+[25.595925] (-) TimerEvent: {}
+[25.696499] (-) TimerEvent: {}
+[25.797086] (-) TimerEvent: {}
+[25.897667] (-) TimerEvent: {}
+[25.998257] (-) TimerEvent: {}
+[26.098858] (-) TimerEvent: {}
+[26.199414] (-) TimerEvent: {}
+[26.299983] (-) TimerEvent: {}
+[26.400557] (-) TimerEvent: {}
+[26.501117] (-) TimerEvent: {}
+[26.601693] (-) TimerEvent: {}
+[26.702488] (-) TimerEvent: {}
+[26.803256] (-) TimerEvent: {}
+[26.904049] (-) TimerEvent: {}
+[27.004824] (-) TimerEvent: {}
+[27.105630] (-) TimerEvent: {}
+[27.206453] (-) TimerEvent: {}
+[27.307019] (-) TimerEvent: {}
+[27.407606] (-) TimerEvent: {}
+[27.508172] (-) TimerEvent: {}
+[27.608739] (-) TimerEvent: {}
+[27.709313] (-) TimerEvent: {}
+[27.809880] (-) TimerEvent: {}
+[27.910705] (-) TimerEvent: {}
+[28.011277] (-) TimerEvent: {}
+[28.111859] (-) TimerEvent: {}
+[28.212432] (-) TimerEvent: {}
+[28.312994] (-) TimerEvent: {}
+[28.413588] (-) TimerEvent: {}
+[28.514200] (-) TimerEvent: {}
+[28.614775] (-) TimerEvent: {}
+[28.715625] (-) TimerEvent: {}
+[28.816583] (-) TimerEvent: {}
+[28.917353] (-) TimerEvent: {}
+[29.018149] (-) TimerEvent: {}
+[29.119003] (-) TimerEvent: {}
+[29.219777] (-) TimerEvent: {}
+[29.320647] (-) TimerEvent: {}
+[29.421414] (-) TimerEvent: {}
+[29.522271] (-) TimerEvent: {}
+[29.623101] (-) TimerEvent: {}
+[29.723931] (-) TimerEvent: {}
+[29.824680] (-) TimerEvent: {}
+[29.925468] (-) TimerEvent: {}
+[30.026329] (-) TimerEvent: {}
+[30.127002] (-) TimerEvent: {}
+[30.227597] (-) TimerEvent: {}
+[30.328178] (-) TimerEvent: {}
+[30.428773] (-) TimerEvent: {}
+[30.529322] (-) TimerEvent: {}
+[30.629906] (-) TimerEvent: {}
+[30.730505] (-) TimerEvent: {}
+[30.831067] (-) TimerEvent: {}
+[30.931660] (-) TimerEvent: {}
+[31.032244] (-) TimerEvent: {}
+[31.132802] (-) TimerEvent: {}
+[31.233359] (-) TimerEvent: {}
+[31.334009] (-) TimerEvent: {}
+[31.402724] (teleop_twist_joy) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/teleop_twist_joy.dir/build.make:76: CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o] Interrupt\n'}
+[31.407412] (teleop_twist_joy) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/teleop_twist_joy.dir/all] Interrupt\n'}
+[31.408137] (teleop_twist_joy) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrupt\n'}
+[31.434402] (-) TimerEvent: {}
+[31.535076] (-) TimerEvent: {}
+[31.543463] (teleop_twist_joy) CommandEnded: {'returncode': -2}
+[31.636405] (-) TimerEvent: {}
+[31.725184] (teleop_twist_joy) JobEnded: {'identifier': 'teleop_twist_joy', 'rc': 'SIGINT'}
+[31.727501] (-) EventReactorShutdown: {}
