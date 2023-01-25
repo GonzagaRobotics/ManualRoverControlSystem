@@ -5,14 +5,14 @@ A repository for developing the User Interface for receiving data and controllin
 ## Packages Info:
 
 ### teleop_twist_node:
-* Command: ros2 launch teleop_twist_joy teleop-launch.py joy_config:=’xbox’ joy_dev:=’dev/inputs/js1’
+* Command: code(ros2 launch teleop_twist_joy teleop-launch.py joy_config:=’xbox’ joy_dev:=’dev/inputs/js1’)
     - Note the the name of the USB might change so js1 might be different
 
 * Cloned from this repo: [Link](https://github.com/ros2/teleop_twist_joy/tree/humble)
 * Responsible for receiving the Xbox controller commands and publishing them to the 'joy' topic
 
 ### command_broker:
-* Command: ros2 run command_broker XboxBroker
+* Command: code(ros2 run command_broker XboxBroker)
 * A node named XboxBroker that subscribes to 'joy' and publishes to 'motor_command' topic
 * The topic 'motor_command' only includes the relevant data from the Xbox controller. The contents are likely to change.
 * 'motor_command' contains a float array that is mapped as follows:
