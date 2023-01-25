@@ -3,7 +3,7 @@
 <package format="3">
   <name>command_broker</name>
   <version>0.0.0</version>
-  <description>Command Broker contains the node that subscribes to the Xbox controller (topic named joy) and publishes to a new topic called motor_command</description>
+  <description>TODO: Package Description</description>
   <maintainer email="nlinthacum@zagmail.gonzaga.edu">nick</maintainer>
   <license>TODO: License declaration</license>
 
@@ -11,7 +11,6 @@
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
 
-  <buildtool_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
