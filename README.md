@@ -4,11 +4,11 @@ A repository for developing the User Interface for receiving data and controllin
 
 ## Packages Info:
 
-###teleop_twist_node:
+### teleop_twist_node:
 * Cloned from this repo: [Link](https://github.com/ros2/teleop_twist_joy/tree/humble)
 * Responsible for receiving the Xbox controller commands and publishing them to the 'joy' topic
 
-###command_broker:
+### command_broker:
 * A node named XboxBroker that subscribes to 'joy' and publishes to 'motor_command' topic
 * The topic 'motor_command' only includes the relevant data from the Xbox controller. This is likely to change.
 * 'motor_command' contains a float array that is mapped as follows:
