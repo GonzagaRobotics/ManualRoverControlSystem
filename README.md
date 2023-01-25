@@ -4,19 +4,19 @@ A repository for developing the User Interface for receiving data and controllin
 
 ## Packages Info:
 
-teleop_twist_node:
+###teleop_twist_node:
 * Cloned from this repo: [Link](https://github.com/ros2/teleop_twist_joy/tree/humble)
 * Responsible for receiving the Xbox controller commands and publishing them to the 'joy' topic
 
-command_broker:
+###command_broker:
 * A node named XboxBroker that subscribes to 'joy' and publishes to 'motor_command' topic
 * The topic 'motor_command' only includes the relevant data from the Xbox controller. This is likely to change.
 * 'motor_command' contains a float array that is mapped as follows:
-	Data[0]  is left trigger. Resting is 0.99999 and fully compressed is -0.99999
-    Data[1] is right trigger.  Resting is 0.99999 and fully compressed is -0.99999
-    Data[2] is left shoulder: Resting is 0, compressed is 1
-    Data[3] is probably right shoulder. Controller button was broken *Check*
-    Data[4] is d pad left and right/ resting is 0, left is 1 and right is -1
+    - Data[0]  is left trigger. Resting is 0.99999 and fully compressed is -0.99999
+    - Data[1] is right trigger.  Resting is 0.99999 and fully compressed is -0.99999
+    - Data[2] is left shoulder: Resting is 0, compressed is 1
+    - Data[3] is probably right shoulder. Controller button was broken *Check*
+    - Data[4] is d pad left and right/ resting is 0, left is 1 and right is -1
 
 
 
