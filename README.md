@@ -10,7 +10,7 @@ A repository for developing the User Interface for receiving data and controllin
 
 ### command_broker:
 * A node named XboxBroker that subscribes to 'joy' and publishes to 'motor_command' topic
-* The topic 'motor_command' only includes the relevant data from the Xbox controller. This is likely to change.
+* The topic 'motor_command' only includes the relevant data from the Xbox controller. The contents are likely to change.
 * 'motor_command' contains a float array that is mapped as follows:
     - Data[0]  is left trigger. Resting is 0.99999 and fully compressed is -0.99999
     - Data[1] is right trigger.  Resting is 0.99999 and fully compressed is -0.99999
