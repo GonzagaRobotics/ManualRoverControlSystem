@@ -5,10 +5,7 @@ A repository for developing the User Interface for receiving data and controllin
 ## Packages Info:
 
 ### teleop_twist_node:
-* Command: 
- '''
-'code(ros2 launch teleop_twist_joy teleop-launch.py joy_config:=’xbox’ joy_dev:=’dev/inputs/js1’)'
-'''
+* Command: 'ros2 launch teleop_twist_joy teleop-launch.py joy_config:=’xbox’ joy_dev:=’dev/inputs/js1’'
 
     - Note the the name of the USB might change so js1 might be different
 
