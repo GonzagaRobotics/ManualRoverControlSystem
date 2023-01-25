@@ -5,7 +5,11 @@ A repository for developing the User Interface for receiving data and controllin
 ## Packages Info:
 
 ### teleop_twist_node:
-* Command: 'code(ros2 launch teleop_twist_joy teleop-launch.py joy_config:=’xbox’ joy_dev:=’dev/inputs/js1’)'
+* Command: 
+ '''
+'code(ros2 launch teleop_twist_joy teleop-launch.py joy_config:=’xbox’ joy_dev:=’dev/inputs/js1’)'
+'''
+
     - Note the the name of the USB might change so js1 might be different
 
 * Cloned from this repo: [Link](https://github.com/ros2/teleop_twist_joy/tree/humble)
