@@ -27,9 +27,9 @@ def generate_launch_description():
                 'deadzone': 0.3,
                 'autorepeat_rate': 20.0,
             }]),
-        launch_ros.actions.Node(
-            package='teleop_twist_joy', executable='teleop_node',
-            name='teleop_twist_joy_node', parameters=[config_filepath],
-            remappings={('/cmd_vel', launch.substitutions.LaunchConfiguration('joy_vel'))},
-            ),
+        # launch_ros.actions.Node(
+        #     package='teleop_twist_joy', executable='teleop_node',
+        #     name='teleop_twist_joy_node', parameters=[config_filepath],
+        #     remappings={('/cmd_vel', launch.substitutions.LaunchConfiguration('joy_vel'))},
+        #     ),
     ])
