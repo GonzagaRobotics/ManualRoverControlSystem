@@ -33,7 +33,8 @@ These instructions assume the micro_ros_agent is already created on the host mac
 Steps to connect microcontroller to ROS2:
 
 * Plug microcontroller into Jetson over USB
-* (Optional) You might need to change the permissions on the USB to allow it to communicate. If so, figure out what the connection is by entering `ls -l /dev/tty*` Then, `sudo chmod 666 /dev/'connection name'`
+* Determine the USB connection name: `ls -l /dev/tty*`
+* (Optional) You might need to change the permissions on the USB to allow it to communicate: `sudo chmod 666 /dev/'connection name'`
 * `source install/local_setup.bash`
 * `ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/'connection name'`
 * Press the enable button on the microcontroller
