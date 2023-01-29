@@ -5,6 +5,7 @@ A repository for developing the User Interface for receiving data and controllin
 ## Packages Info
 
 ### command_broker:
+* Source from ros_ws: `. install/setup.bash`
 * Command: `ros2 run command_broker XboxBroker`
 * A node named XboxBroker that subscribes to 'joy' and publishes to 'motor_command' topic
 * The topic 'motor_command' only includes the relevant data from the Xbox controller. The contents are likely to change.
