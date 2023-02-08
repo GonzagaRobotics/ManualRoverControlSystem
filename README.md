@@ -42,6 +42,12 @@ Steps to connect microcontroller to ROS2:
 * `ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/'connection name'`
 * Press the enable button on the microcontroller
 * You should now be able to see the microcontroller's nodes and topics using ros2 topic list and ros2 node list.
+
+## USB connection to Docker container
+ * Linux automatically does this
+ * Windows and Mac possible methods for USB connection
+  * USB over IP: https://github.com/jiegec/usbip
+
 ## Goals
 * The rover and its various sub-systems will be controllable via a Manual Rover Control System (MRCS). 
 * The MRCS will allow a human operator to drive the rover and manage its various sub-systems, including the operation of the manipulator arm. 
