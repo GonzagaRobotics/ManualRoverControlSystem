@@ -20,6 +20,13 @@ def generate_launch_description():
             executable='XboxBroker',
             output='screen'
         )
+        Node(
+            name='CommandExposer',
+            package='command_exposer',
+            executable='CommandExposer',
+            output='screen'
+        )
+
     ])
 
 ld = generate_launch_description()
