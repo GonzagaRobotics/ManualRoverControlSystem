@@ -40,7 +40,7 @@ public:
     float right_shoulder = msg->buttons[5];
     float dpad_lr = msg->axes[6];
 
-    modified_data->data = {left_trigger, right_trigger, left_shoulder, right_shoulder, dpad_lr};
+    modified_data.data = {left_trigger, right_trigger, left_shoulder, right_shoulder, dpad_lr};
       // modified_data.data = {msg->axes[0], msg->axes[1], msg->axes[2], msg->axes[3], msg->axes[4], msg->axes[5], msg->axes[6], msg->axes[7]};
 
         // Publish the modified data to the "motor_command" topic

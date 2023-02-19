@@ -32,10 +32,10 @@ public:
       [this](const std_msgs::msg::Float32MultiArray::SharedPtr msg) -> void
       {
         // Don't modify the data here
-        std_msgs::msg::Float32MultiArray unmodified_data = msg->data;
+        // std_msgs::msg::Float32MultiArray unmodified_data = msg->data;
  
         // Publish the unmodified data to the "motor_command_exposed" topic
-        pub_->publish(unmodified_data);
+        pub_->publish(msg);
       };
 
     sub_ = this->create_subscription<std_msgs::msg::Float32MultiArray>("motor_command",qos, callback);
