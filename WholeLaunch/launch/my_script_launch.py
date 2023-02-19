@@ -19,7 +19,7 @@ def generate_launch_description():
             package='command_broker',
             executable='XboxBroker',
             output='screen'
-        )
+        ),
         Node(
             name='CommandExposer',
             package='command_exposer',
