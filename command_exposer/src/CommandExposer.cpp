@@ -47,7 +47,7 @@ public:
   }
 
 private:
-  rclcpp::Subscription<std_msgs::msg::Float32MultiArray2>::SharedPtr sub_;
+  rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr sub_;
   rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr pub_;
 };
 
