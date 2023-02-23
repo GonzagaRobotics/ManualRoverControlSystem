@@ -4,6 +4,16 @@ A repository for developing the User Interface for receiving data and controllin
 
 ## Packages Info
 
+### Whole Launch
+
+1.	Open your terminal and navigate to your working directory (for example, ros2_ws).
+2.	Clone the latest version of the MRCS: `git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`
+3.	Once the repository is cloned, navigate to the top of the ros2_ws directory and build the project using Colcon by running the command: `colcon build`. If an error occurs, try again until it works.
+4.  Source from ros_ws: `. install/setup.bash`
+4.	When the build is complete and you're ready to launch, run the command: `ros2 launch src/ManualRoverControlSystem/WholeLaunch/launch/auto_launch.py`
+5.	Open a new terminal and run the command: `ros2 node list` and `ros2 topic list` to check everything is working correctly
+
+
 ### command_broker:
 * Source from ros_ws: `. install/setup.bash`
 * Command: `ros2 run command_broker XboxBroker`
