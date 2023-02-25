@@ -21,11 +21,11 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 8. Source ROS2 in the parent directory by running the command: `. install/setup.bash`.
 9. Startup `tmux` by running the command `tmux`.
    - If a green status bar appears at the bottom of your terminal, move on to the next step. Otherwise, try step 9 again, and if that doesn't work, try step 1 to make sure it is installed correctly on your system.
-10. Before moving on, note that all commands in `tmux` are triggered by a prefix key followed by a command key. For our use case, the "prefix key" is the keyboard shortcut `CTRL+B`, which both keys should be pressed at the same time.
-11. Press `CTRL+B` followed by a ` SHIFT+ ‘` to open a top and bottom split-screen terminal.
+10. Before moving on, note that all commands in `tmux` are triggered by a prefix key followed by a command key. For our use case, the "prefix key" is the keyboard shortcut `CTRL+B`.
+11. Press `CTRL+B` followed by a ` SHIFT+ ‘` or `"` to open a top and bottom split-screen terminal.
 12. Now that you have two terminal panels, use `CTRL+B` followed by the `UP` arrow to navigate to the top panel.
-13. In the top panel, run the launch file command by running `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py`. The output should look something like this:
-    - You can stop this launch process at any time by pressing `CTRL+C`.
+13. In the top panel, run the launch file command by running `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py`. 
+You can stop this launch process at any time by pressing `CTRL+C`. The output should look something like this:
     - [INFO] [launch]: All log files can be found below /root/.ros/log/2023-02-25-03-11-34-708275-2f922f3c3a13-1665
     - [INFO] [launch]: Default logging verbosity is set to INFO
     - [INFO] [joy_node-1]: process started with pid [1666]
