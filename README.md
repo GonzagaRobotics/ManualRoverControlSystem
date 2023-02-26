@@ -1,8 +1,54 @@
 # Manual Rover Control System (MRCS)
 A repository for developing the User Interface for receiving data and controlling the rover
-
-
 ## Packages Info
+
+# Autolaunch
+
+This guide will show you how to set up and launch the MRCS (Manual Rover Control System) using ROS 2 on a Docker bash terminal.
+
+## Required Packages
+1. ROS2 Docker Terminal
+2. Latest version of Tmux: A link to a very useful guide: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+
+## Instructions
+
+1. Open your ROS 2 Docker terminal.
+2. Create a new directory named `ros2_ws` with a subdirectory called `src` using `mkdir -p ros2_ws/src`.
+3. Navigate to `src` by running `cd ros2_ws/src`.
+4. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`.
+5. Navigate out of `src` in the top of the directory `ros2_ws` by running the command `cd ros2_ws`.
+6. Build the project by running `colcon build`.
+   - If you encounter the error message `stderr: teleop_twist_joy`, run `colcon build` again to resolve it.
+7. Source ROS2 in the parent directory by running the command: `. install/setup.bash`.
+8. Startup `tmux`.
+   -a green status bar should appear. If it doesn't, make sure you have tmux installed in your docker container and try again.
+9. Open a tmux split screen terminal
+   - A link to tmux keybinds here: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+   - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
+10. Navigate to a terminal run the command `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py`. 
+    - You can stop this launch process at any time by pressing `CTRL+C`. The output should look something like this:
+    
+      ```[INFO] [launch]: All log files can be found below /root/.ros/log/2023-02-25-03-11-34-708275-2f922f3c3a13-1665
+      [INFO] [launch]: Default logging verbosity is set to INFO
+      [INFO] [joy_node-1]: process started with pid [1666]
+      [INFO] [XboxBroker-2]: process started with pid [1668]
+      [INFO] [CommandExposer-3]: process started with pid [1670]
+      ```
+      
+11. Navigate to another terminal panel.
+12. In the bottom panel, run `ros2 topic list`.
+    - The list should look something like this:
+       ```/cmd_vel
+       /joy
+       /joy/set_feedback
+       /motor_command
+       /motor_command_exposed
+       /parameter_events
+       /rosout
+       ```
+       
+13. Congratulations, you’re all set!
+
 
 ### command_broker:
 * Source from ros_ws: `. install/setup.bash`
