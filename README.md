@@ -25,7 +25,7 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 9. Open a tmux split screen terminal
    - A link to tmux keybinds here: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
    - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
-10. Navigate to a terminal run the command `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py`. 
+10. Navigate to a terminal run the command `ros2 launch src/ManualRoverControlSystem/Wholelaunch/launch/auto_launch.py`. 
     - You can stop this launch process at any time by pressing `CTRL+C`. The output should look something like this:
     
       ```[INFO] [launch]: All log files can be found below /root/.ros/log/2023-02-25-03-11-34-708275-2f922f3c3a13-1665
