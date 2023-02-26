@@ -13,7 +13,12 @@ def generate_launch_description():
       )
     return LaunchDescription([
         telop_twist_joy,
-
+        Node(
+            name='CommandReciever',
+            package='jetson_comm',
+            executable='CommandReciever',
+            output='screen'
+        ),
         Node(
             name='XboxBroker',
             package='command_broker',
