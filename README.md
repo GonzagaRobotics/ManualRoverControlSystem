@@ -1,5 +1,6 @@
 # Manual Rover Control System (MRCS)
 A repository for developing the User Interface for receiving data and controlling the rover
+## Packages Info
 
 # Autolaunch
 
@@ -19,7 +20,7 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 6. Build the project by running `colcon build`.
    - If you encounter the error message `stderr: teleop_twist_joy`, run `colcon build` again to resolve it.
 7. Source ROS2 in the parent directory by running the command: `. install/setup.bash`.
-8. Startup `tmux` by running the command `tmux`.
+8. Startup `tmux`.
    - If a green status bar appears at the bottom of your terminal, move on to the next step. Otherwise, try step 9 again, and if that doesn't work, try step 1 to make sure it is installed correctly on your system.
 9. Open a tmux split screen terminal
    - A link to tmux keybinds here: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
