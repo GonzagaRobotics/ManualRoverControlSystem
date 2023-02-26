@@ -48,7 +48,6 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
        
 14. Congratulations, you’re all set!
 
-#Packages Info:
 
 ### command_broker:
 * Source from ros_ws: `. install/setup.bash`
