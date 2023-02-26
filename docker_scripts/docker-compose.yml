@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+    xbox_controller:
+        build:
+            context: ../
+            dockerfile: docker_scripts/hostDockerfile
+        command: ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py

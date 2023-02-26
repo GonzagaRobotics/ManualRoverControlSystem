@@ -1,0 +1,18 @@
+FROM osrf/ros:humble-desktop
+
+SHELL ["/bin/bash", "-c"]
+
+# sets the working directory for subsequent commands to'/app'
+# make it clear what directory the subsequent commands should be run in
+# 'WORKDIR' help make the Dockerfile easier to read and understand by providing context for subsequent commands
+WORKDIR /app/ros2_ws/src
+
+# copying all folders
+COPY . .
+
+RUN source /opt/ros/humble/setup.bash && \
+    cd /app/ros2_ws && \
+    colcon build
+
+ENTRYPOINT ["docker_scripts/ros_entrypoint.sh"]
+CMD ["bash"]
