@@ -5,7 +5,8 @@ services:
         build:
             context: ../
             dockerfile: docker_scripts/hostDockerfile
-        command: ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py
+        restart: always 
+        command: ros2 launch autolaunch/launch/auto_launch.py
     ros_echo:
         image: osrf/ros:humble-desktop
         command: /bin/bash -c "ros2 topic list > /topic_list.txt && tail -f /dev/null" 

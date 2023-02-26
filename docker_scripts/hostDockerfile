@@ -12,6 +12,7 @@ COPY . .
 
 RUN source /opt/ros/humble/setup.bash && \
     cd /app/ros2_ws && \
+    colcon build && \
     colcon build
 
 ENTRYPOINT ["docker_scripts/ros_entrypoint.sh"]
