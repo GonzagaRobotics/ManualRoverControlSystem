@@ -21,7 +21,7 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
    - If you encounter the error message `stderr: teleop_twist_joy`, run `colcon build` again to resolve it.
 7. Source ROS2 in the parent directory by running the command: `. install/setup.bash`.
 8. Startup `tmux`.
-   -You should see a green status bar. Otherwise, try step 9 again, and if that doesn't work, try step 1 to make sure it is installed correctly on your system.
+   -a green status bar should appear. If it doesn't, make sure you have tmux installed in your docker container and try again.
 9. Open a tmux split screen terminal
    - A link to tmux keybinds here: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
    - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
