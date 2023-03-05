@@ -3,6 +3,9 @@ version: '2'
 services:
     xbox_controller:
         build:
-            context: ../
-            dockerfile: docker_scripts/hostDockerfile
+            context: ../../
+            dockerfile: docker_scripts/for_host/hostDockerfile
+        network_mode: "host"
+        pid: "host"
         command: ros2 launch autolaunch/launch/auto_launch.py
+

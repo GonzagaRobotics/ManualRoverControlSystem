@@ -15,4 +15,4 @@ RUN source /opt/ros/humble/setup.bash && \
     colcon build && \
     colcon build
 
-ENTRYPOINT ["docker_scripts/ros_entrypoint.sh"]
+ENTRYPOINT ["docker_scripts/for_host/ros_entrypoint.sh"]
