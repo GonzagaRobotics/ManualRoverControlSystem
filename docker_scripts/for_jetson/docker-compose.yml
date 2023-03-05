@@ -1,0 +1,5 @@
+version: '2'
+
+services:
+    ros_echo:
+        image: osrf/ros:humble-desktop
