@@ -1,0 +1,3 @@
+[console_scripts]
+CommandReceiver = jetson_comm.CommandReceiver:main
+
