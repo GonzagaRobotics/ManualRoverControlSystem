@@ -8,15 +8,16 @@ import logging
 
 class CommandReciever(Node): 
     def __init__(self):
-        self.get_logger().setLevel(logging.INFO)
-        super().__init__("CommandReciever") 
+        super().__init__("CommandReciever")
+        self.get_logger().set_level(logging.INFO)
+        self.get_logger().info('I have initialized up successfully.')
 
 
         self.command_subscriber = self.create_subscription(
                 Float32MultiArray,
                 'motor_command_exposed',
                 self.callback,
-                QoSPresetProfiles.ACTION_STATUS_DEFAULT
+                10
                 )
 
 
