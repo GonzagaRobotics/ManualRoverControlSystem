@@ -5,7 +5,10 @@ services:
       build: 
        context: ../..
        dockerfile: docker_scripts/for_jetson/jetsonDockerfile
-      network_mode: "host"
-      pid: "host"
-      command: ros2 topic list
-      restart: always
+       #network_mode: "host"
+       #pid: "host"
+      command: tail -F anything # will run container forever
+networks:
+  default:
+    name: custom_network
+    external: true
