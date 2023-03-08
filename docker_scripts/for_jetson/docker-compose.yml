@@ -1,6 +1,12 @@
 version: '2'
 
 services:
+    micro-ros-agent:
+      image: microros/micro-ros-agent:humble
+      command: serial --dev /dev/ttyUSB0
+      privileged: true
+      network_mode: "host"
+      pid: "host"
     ros_echo:
       build: 
        context: ../..
@@ -8,6 +14,8 @@ services:
       network_mode: "host"
       pid: "host"
       command: tail -F anything # will run container forever
+      depends_on:
+        - micro-ros-agent
       #networks:
       #default:
       #name: custom_network
