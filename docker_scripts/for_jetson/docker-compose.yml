@@ -16,7 +16,3 @@ services:
       command: tail -F anything # will run container forever
       depends_on:
         - micro-ros-agent
-      #networks:
-      #default:
-      #name: custom_network
-      #external: true
