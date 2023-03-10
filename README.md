@@ -29,13 +29,13 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
    
 10. Navigate to a terminal and run the command to launch all nodes at once: `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py`
    
-   - By default, all nodes are launched with no added arguments.
-   - To stop specific nodes from launching, you can add any of the following commands to the main launch command: 
+   - By default, all nodes are launched with main launch command.
+   - To stop specific nodes from launching, you can add any of the following commands after the main launch command: 
       - Add `xbox_broker:=False` to stop the Command Broker node from launching.
       - Add `command_exposer:=False` to stop the Command Exposer node from launching.
       - Add `command_receiver:=False` to stop the Jetson_Comm node from launching.
       - For now, `teleop_twist_node` always launches by default.
-   - For example, if you wanted to turn off both the Command Exposer and Jetson_Comm nodes, you'd use the command: `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py command_exposer:=False command_receiver:=False`
+   - For example, if you wanted to turn stop both the Command Exposer and Jetson_Comm nodes from launching, you'd use the command: `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py command_exposer:=False command_receiver:=False`
    
       - At any time with the following command, you can stop the launch file by pressing `CTRL+C`. If you choose to launch all nodes at once, the output should look something like this:
     
