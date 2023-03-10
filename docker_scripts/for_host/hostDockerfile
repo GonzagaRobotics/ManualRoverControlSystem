@@ -14,5 +14,6 @@ RUN source /opt/ros/humble/setup.bash && \
     cd /app/ros2_ws && \
     colcon build && \
     colcon build
+RUN echo "source /opt/ros/humble/setup.bash" > ~/.bashrc
 
 ENTRYPOINT ["docker_scripts/for_host/ros_entrypoint.sh"]

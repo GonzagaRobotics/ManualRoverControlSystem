@@ -5,6 +5,9 @@ services:
         build:
             context: ../../
             dockerfile: docker_scripts/for_host/hostDockerfile
+        devices:
+          - /dev/input/js0:/dev/input/js0
+        privileged: true
         network_mode: "host"
         pid: "host"
         command: ros2 launch autolaunch/launch/auto_launch.py
