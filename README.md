@@ -2,6 +2,41 @@
 A repository for developing the User Interface for receiving data and controlling the rover
 ## Packages Info
 
+# Docker Containers for XBox controller Host and microcontroller with the Jetson
+
+This guide will show you how to set up and launch the MRCS (Manual Rover Control System) using Docker on a bash terminal
+## Required Packages
+1. On a Linux OS or VM
+2. Docker Installation (Do not install the snap store version of docker)
+3. Latest version of Tmux: A link to a very useful guide: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+
+## Instructions if only using one PC
+
+1. Open your bash terminal
+2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git
+3. type `ls -l /dev/input/j`
+4. type `Tab` twice to find which number with `js#` is the XBox controller
+    - Then press `Enter`
+5. If the joystick is not `js0` some other `js#` then change the following:
+    - run `cd ManualRoverControlSystem/autolaunch/launch`
+    - in `auto_launch.py` change all instances of `js0` to `js#`
+    - go back and run `cd ManualRoverControlSystem/docker_scripts/for_host`
+    - in `docker-compose.yml` change all instances of `js0` to `js#``
+3. Go back and run `cd ManualRoverControlSystem/docker_scripts`
+4. Startup `tmux`.
+   -a green status bar should appear. If it doesn't, make sure you have tmux installed in your docker container and try again.
+5. Open a tmux split screen terminal with `CTRL+B` and `"`
+   - A link to tmux keybinds here: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+   - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
+6. On the terminal navigate to `for_host` by running `cd for_host`
+7. Run `docker compose up`
+8. Press `CTRL+B` and then the `up arrow` to navigate to the other termnial
+9. In that terminal navigate to `for_jetson` by running `cd for_jetson`
+10. Open a tmux split screen terminal from here with `CTRL+B` and `"`
+11. In this terminal run `for_jetson-micro-ros-agent-1`
+
+## Instructions if using the host PC and Jetson
+
 # Autolaunch
 
 This guide will show you how to set up and launch the MRCS (Manual Rover Control System) using ROS 2 on a Docker bash terminal.
