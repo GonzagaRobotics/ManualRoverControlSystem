@@ -24,16 +24,19 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
     - in `docker-compose.yml` change all instances of `js0` to `js#``
 3. Go back and run `cd ManualRoverControlSystem/docker_scripts`
 4. Startup `tmux`.
-   -a green status bar should appear. If it doesn't, make sure you have tmux installed in your docker container and try again.
-5. Open a tmux split screen terminal with `CTRL+B` and `"`
-   - A link to tmux keybinds here: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+5. Open a tmux split screen terminal with `CTRL+B` and pressing `"`
    - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
 6. On the terminal navigate to `for_host` by running `cd for_host`
 7. Run `docker compose up`
 8. Press `CTRL+B` and then the `up arrow` to navigate to the other termnial
 9. In that terminal navigate to `for_jetson` by running `cd for_jetson`
-10. Open a tmux split screen terminal from here with `CTRL+B` and `"`
-11. In this terminal run `for_jetson-micro-ros-agent-1`
+10. Open a tmux split screen terminal from here with `CTRL+B` and pressing `"`
+11. In this terminal run `docker start -ai for_jetson-micro-ros-agent-1`
+ - before this docker command do `Plug microcontroller into Jetson over USB` instructions below in this README
+12. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
+13. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
+14. In this docker container run `ros2 topic list` to see if `motor_command` is listed
+15. Then run `ros2 topic echo motor_command/left_trigger` to see if this container can see the left trigger
 
 ## Instructions if using the host PC and Jetson
 
