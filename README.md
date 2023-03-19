@@ -10,8 +10,7 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 2. Docker Installation (Do not install the snap store version of docker)
 3. Latest version of Tmux: A link to a very useful guide: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
 
-## Instructions if only using one PC
-
+## Instructions Common
 1. Open your bash terminal
 2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git
 3. type `ls -l /dev/input/j`
@@ -21,24 +20,60 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
     - run `cd ManualRoverControlSystem/autolaunch/launch`
     - in `auto_launch.py` change all instances of `js0` to `js#`
     - go back and run `cd ManualRoverControlSystem/docker_scripts/for_host`
-    - in `docker-compose.yml` change all instances of `js0` to `js#``
+    - in `docker-compose.yml` change all instances of `js0` to `js#`
+
+## Instructions if only using one PC
+
+1. Plug in microconroller to computer with USB
+2. Run `sudo chmod 666 /dev/ttyUSB0`
+   - May have to change `ttyUSB#`
 3. Go back and run `cd ManualRoverControlSystem/docker_scripts`
-4. Startup `tmux`.
+4. Run the command `tmux`
 5. Open a tmux split screen terminal with `CTRL+B` and pressing `"`
    - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
 6. On the terminal navigate to `for_host` by running `cd for_host`
-7. Run `docker compose up`
+7. Run `docker compose up` to start the Xbox controller
 8. Press `CTRL+B` and then the `up arrow` to navigate to the other termnial
 9. In that terminal navigate to `for_jetson` by running `cd for_jetson`
-10. Open a tmux split screen terminal from here with `CTRL+B` and pressing `"`
-11. In this terminal run `docker start -ai for_jetson-micro-ros-agent-1`
- - before this docker command do `Plug microcontroller into Jetson over USB` instructions below in this README
-12. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
-13. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
-14. In this docker container run `ros2 topic list` to see if `motor_command` is listed
-15. Then run `ros2 topic echo motor_command/left_trigger` to see if this container can see the left trigger
+10. Run `docker compose up -d`
+
+For debugging
+
+11. Open a tmux split screen terminal from here with `CTRL+B` and pressing `"`
+12. In this terminal run `docker start -ai for_jetson-micro-ros-agent-1`
+    - There should be messages from the microcontrollers here
+14. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
+15. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
+16. In this docker container run `ros2 topic list` to see if `motor_command` is listed
+17. Then run `ros2 topic echo /motor_command/left_trigger` to see if this container can see the left trigger
 
 ## Instructions if using the host PC and Jetson
+1. setup antennas for the host PC and Jetson from the `antenna_setup.md` file in the repo
+2. Go back and run `cd ManualRoverControlSystem/docker_scripts/for_host`
+3. Run `docker compose up` to start the Xbox controller
+4. On another terminal instance run `ssh robotics@192.168.0.2`
+   - enter the password to enter into the Jetson
+5. Plug in microconroller to Jetson with USB
+5. In the Jetson if not automatically done run `sudo chmod 666 /dev/ttyUSB0`
+   - May have to change `ttyUSB#`
+7. In the Jetson run `cd ~/ManualRoverControlSystem/docker_scripts/for_jetson`
+8. Run `docker compose up -d`
+
+For debugging
+
+9. On the Jetson run the command `tmux`
+10. Open a tmux split screen terminal from here with `CTRL+B` and pressing `"`
+11. In this terminal run `docker start -ai for_jetson-micro-ros-agent-1`
+    - There should be messages from the microcontrollers here
+13. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
+14. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
+15. In this docker container run `ros2 topic list` to see if `motor_command` is listed
+16. Then run `ros2 topic echo /motor_command/left_trigger` to see if this container can see the left trigger
+
+## Instructions the common result of from both
+1. Press the `right trigger` on the XBox controller and the motors should spin
+
+## Instructions common for debugging both
 
 # Autolaunch
 
