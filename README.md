@@ -68,12 +68,12 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 * Command: `ros2 run command_broker XboxBroker`
 * A node named XboxBroker that subscribes to 'joy' and publishes to 'motor_command' topic
 * The topic 'motor_command' only includes the relevant data from the Xbox controller. The contents are likely to change.
-* 'motor_command' contains a float array that is mapped as follows:
-    - Data[0]  is left trigger. Resting is 0.99999 and fully compressed is -0.99999
-    - Data[1] is right trigger.  Resting is 0.99999 and fully compressed is -0.99999
-    - Data[2] is left shoulder: Resting is 0, compressed is 1
-    - Data[3] is probably right shoulder. Controller button was broken **Check**
-    - Data[4] is d pad left and right. resting is 0, left is 1 and right is -1
+* 'motor_command' contains multiple float messages that is mapped as follows:
+    - left trigger. Resting is 0.99999 and fully compressed is -0.99999
+    - right trigger: Resting is 0.99999 and fully compressed is -0.99999
+    - left shoulder: Resting is 0, compressed is 1
+    - right shoulder: Resting is 0, compressed is 1
+    - d pad left and right. resting is 0, left is 1 and right is -1
 
 
 ### teleop_twist_node:
