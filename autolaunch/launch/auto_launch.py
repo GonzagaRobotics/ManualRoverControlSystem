@@ -27,7 +27,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('teleop_twist_joy'), 'launch'),
             '/teleop-launch.py']),
-            launch_arguments={'joy_config': 'xbox', 'joy_dev': '/dev/input/js1'}.items(),
+            launch_arguments={'joy_config': 'xbox','joy_dev':'/dev/input/js1'}.items(),
       )
 
     # Define XboxBroker node with conditional launching based on command line argument value
