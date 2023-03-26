@@ -13,7 +13,9 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 ## Instructions Common
 1. Open your bash terminal
 2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`
+
 Steps 3 to 5 only if wanting to connect the joystick
+
 3. type `ls -l /dev/input/j`
 4. type `Tab` twice to find which number with `js#` is the XBox controller
     - Then press `Enter`
