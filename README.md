@@ -44,12 +44,15 @@ Steps 1 to 2 only if wanting to connect a microcontroller
 For debugging
 
 11. Open a tmux split screen terminal from here with `CTRL+B` and pressing `"`
+
+Step 12 only if wanting to connect a microcontroller
+
 12. In this terminal run `docker start -ai for_jetson-micro-ros-agent-1`
     - There should be messages from the microcontrollers here
-14. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
-15. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
-16. In this docker container run `ros2 topic list` to see if `motor_command` is listed
-17. Then run `ros2 topic echo /motor_command/left_trigger` to see if this container can see the left trigger
+13. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
+14. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
+15. In this docker container run `ros2 topic list` to see if `motor_command` is listed
+16. Then run `ros2 topic echo /motor_command/left_trigger` to see if this container can see the left trigger
 
 ## Instructions if using the host PC and Jetson
 1. setup antennas for the host PC and Jetson from the `antenna_setup.md` file in the repo
