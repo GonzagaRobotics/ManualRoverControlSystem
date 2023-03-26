@@ -12,7 +12,8 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 
 ## Instructions Common
 1. Open your bash terminal
-2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git
+2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`
+Steps 3 to 5 only if wanting to connect the joystick
 3. type `ls -l /dev/input/j`
 4. type `Tab` twice to find which number with `js#` is the XBox controller
     - Then press `Enter`
@@ -24,11 +25,12 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 
 ## Instructions if only using one PC
 
+Steps 1 to 2 only if wanting to connect a microcontroller
 1. Plug in microconroller to computer with USB
 2. Run `sudo chmod 666 /dev/ttyUSB0`
    - May have to change `ttyUSB#`
 3. Go back and run `cd ManualRoverControlSystem/docker_scripts`
-4. Run the command `tmux`
+4. Run the command `tmux` (could also open a new terminal screen if you do not want to use `tmux`)
 5. Open a tmux split screen terminal with `CTRL+B` and pressing `"`
    - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
 6. On the terminal navigate to `for_host` by running `cd for_host`
@@ -54,7 +56,7 @@ For debugging
 4. On another terminal instance run `ssh robotics@192.168.0.2`
    - enter the password to enter into the Jetson
 5. Plug in microconroller to Jetson with USB
-5. In the Jetson if not automatically done run `sudo chmod 666 /dev/ttyUSB0`
+6. In the Jetson if not automatically done run `sudo chmod 666 /dev/ttyUSB0`
    - May have to change `ttyUSB#`
 7. In the Jetson run `cd ~/ManualRoverControlSystem/docker_scripts/for_jetson`
 8. Run `docker compose up -d`
