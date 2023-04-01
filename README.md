@@ -114,7 +114,6 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
       - Add `xbox_broker:=False` to stop the Command Broker node from launching.
       - Add `command_exposer:=False` to stop the Command Exposer node from launching.
       - Add `command_receiver:=False` to stop the Jetson_Comm node from launching.
-<<<<<<< HEAD
       - Add `teleop_twist_node:=False` to stop the Teleop_Twist node from launching.
       - Add `realsense2_camera:=False` to stop the RealSense Camera node from launching.
    - For example, if you wanted to stop both the Command Exposer and Jetson_Comm nodes from launching, you'd use the command: `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py command_exposer:=False command_receiver:=False`
@@ -135,21 +134,6 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
         [realsense2_camera_node-2] [WARN] [1680378074.923078773] [camera.camera]: No RealSense devices were found!
         [CommandReceiver-5] [INFO] [1680378074.966731093] [CommandReceiver]: I have initialized up successfully.
         ```
-=======
-      - For now, `teleop_twist_node` always launches by default.
-   - For example, if you wanted to turn stop both the Command Exposer and Jetson_Comm nodes from launching, you'd use the command: `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py command_exposer:=False command_receiver:=False`
-   
-      - At any time with the following command, you can stop the launch file by pressing `CTRL+C`. If you choose to launch all nodes at once, the output should look something like this:
-    
-      ``` [INFO] [launch]: All log files can be found below /root/.ros/log/2023-03-10-22-51-42-519396-2f922f3c3a13-19096
-      [INFO] [launch]: Default logging verbosity is set to INFO
-      [INFO] [joy_node-1]: process started with pid [19097]
-      [INFO] [XboxBroker-2]: process started with pid [19099]
-      [INFO] [CommandExposer-3]: process started with pid [19101]
-      [INFO] [CommandReceiver-4]: process started with pid [19103]
-      [CommandReceiver-4] [INFO] [1678488703.228953101] [CommandReceiver]: I have initialized up successfully.
-      ```
->>>>>>> cc657099cff63a7fc2729a2ced0642e08dd3a393
       
 11. Navigate to another terminal panel.
 12. In the bottom panel, run `ros2 topic list`.
