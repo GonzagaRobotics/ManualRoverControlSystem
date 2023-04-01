@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'gps_imu_pub = gps_imu_pubsub.publisher_member_function:main',
+            'gps_imu_pub = gps_imu_pubsub.gps_imu_pub:main',
+            'gps_imu_sub = gps_imu_pubsub.gps_imu_sub:main',
         ],
     },
 )
