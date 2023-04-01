@@ -121,19 +121,19 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
    
       - At any time with the following command, you can stop the launch file by pressing `CTRL+C`. If you choose to launch all nodes at once, the output should look something like this(in this example the realsense camera wasn't connected):
     
-      ``` [[INFO] [launch]: All log files can be found below /root/.ros/log/2023-04-01-19-41-14-650243-docker-desktop-1043
-[INFO] [launch]: Default logging verbosity is set to INFO
-[INFO] [realsense2_camera_node-2]: process started with pid [1063]
-[INFO] [joy_node-1]: process started with pid [1061]
-[INFO] [XboxBroker-3]: process started with pid [1065]
-[INFO] [CommandExposer-4]: process started with pid [1069]
-[INFO] [CommandReceiver-5]: process started with pid [1073]
-[realsense2_camera_node-2] [INFO] [1680378074.921175437] [camera.camera]: RealSense ROS v4.51.1
-[realsense2_camera_node-2] [INFO] [1680378074.921306110] [camera.camera]: Built with LibRealSense v2.53.1
-[realsense2_camera_node-2] [INFO] [1680378074.921340223] [camera.camera]: Running with LibRealSense v2.53.1
-[realsense2_camera_node-2] [WARN] [1680378074.923078773] [camera.camera]: No RealSense devices were found!
-[CommandReceiver-5] [INFO] [1680378074.966731093] [CommandReceiver]: I have initialized up successfully.
-      ```
+      ```[[INFO] [launch]: All log files can be found below /root/.ros/log/2023-04-01-19-41-14-650243-docker-desktop-1043
+        [INFO] [launch]: Default logging verbosity is set to INFO
+        [INFO] [realsense2_camera_node-2]: process started with pid [1063]
+        [INFO] [joy_node-1]: process started with pid [1061]
+        [INFO] [XboxBroker-3]: process started with pid [1065]
+        [INFO] [CommandExposer-4]: process started with pid [1069]
+        [INFO] [CommandReceiver-5]: process started with pid [1073]
+        [realsense2_camera_node-2] [INFO] [1680378074.921175437] [camera.camera]: RealSense ROS v4.51.1
+        [realsense2_camera_node-2] [INFO] [1680378074.921306110] [camera.camera]: Built with LibRealSense v2.53.1
+        [realsense2_camera_node-2] [INFO] [1680378074.921340223] [camera.camera]: Running with LibRealSense v2.53.1
+        [realsense2_camera_node-2] [WARN] [1680378074.923078773] [camera.camera]: No RealSense devices were found!
+        [CommandReceiver-5] [INFO] [1680378074.966731093] [CommandReceiver]: I have initialized up successfully.
+        ```
       
 11. Navigate to another terminal panel.
 12. In the bottom panel, run `ros2 topic list`.
