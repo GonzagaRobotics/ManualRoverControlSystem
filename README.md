@@ -12,7 +12,10 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 
 ## Instructions Common
 1. Open your bash terminal
-2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git
+2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`
+
+Steps 3 to 5 only if wanting to connect the joystick
+
 3. type `ls -l /dev/input/j`
 4. type `Tab` twice to find which number with `js#` is the XBox controller
     - Then press `Enter`
@@ -24,11 +27,12 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 
 ## Instructions if only using one PC
 
+Steps 1 to 2 only if wanting to connect a microcontroller
 1. Plug in microconroller to computer with USB
 2. Run `sudo chmod 666 /dev/ttyUSB0`
    - May have to change `ttyUSB#`
 3. Go back and run `cd ManualRoverControlSystem/docker_scripts`
-4. Run the command `tmux`
+4. Run the command `tmux` (could also open a new terminal screen if you do not want to use `tmux`)
 5. Open a tmux split screen terminal with `CTRL+B` and pressing `"`
    - To close out of a panel at any time, type `exit` or hit `CTRL+D`.
 6. On the terminal navigate to `for_host` by running `cd for_host`
@@ -40,12 +44,15 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 For debugging
 
 11. Open a tmux split screen terminal from here with `CTRL+B` and pressing `"`
+
+Step 12 only if wanting to connect a microcontroller
+
 12. In this terminal run `docker start -ai for_jetson-micro-ros-agent-1`
     - There should be messages from the microcontrollers here
-14. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
-15. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
-16. In this docker container run `ros2 topic list` to see if `motor_command` is listed
-17. Then run `ros2 topic echo /motor_command/left_trigger` to see if this container can see the left trigger
+13. Press `CTRL+B` and then the `up arrow` to navigate to the other `for_jetson` termnial
+14. In this terminal run `docker exec -it for_jetson-ros_echo-1 bash`
+15. In this docker container run `ros2 topic list` to see if `motor_command` is listed
+16. Then run `ros2 topic echo /motor_command/left_trigger` to see if this container can see the left trigger
 
 ## Instructions if using the host PC and Jetson
 1. setup antennas for the host PC and Jetson from the `antenna_setup.md` file in the repo
@@ -54,7 +61,7 @@ For debugging
 4. On another terminal instance run `ssh robotics@192.168.0.2`
    - enter the password to enter into the Jetson
 5. Plug in microconroller to Jetson with USB
-5. In the Jetson if not automatically done run `sudo chmod 666 /dev/ttyUSB0`
+6. In the Jetson if not automatically done run `sudo chmod 666 /dev/ttyUSB0`
    - May have to change `ttyUSB#`
 7. In the Jetson run `cd ~/ManualRoverControlSystem/docker_scripts/for_jetson`
 8. Run `docker compose up -d`
@@ -107,19 +114,26 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
       - Add `xbox_broker:=False` to stop the Command Broker node from launching.
       - Add `command_exposer:=False` to stop the Command Exposer node from launching.
       - Add `command_receiver:=False` to stop the Jetson_Comm node from launching.
-      - For now, `teleop_twist_node` always launches by default.
-   - For example, if you wanted to turn stop both the Command Exposer and Jetson_Comm nodes from launching, you'd use the command: `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py command_exposer:=False command_receiver:=False`
+      - Add `teleop_twist_node:=False` to stop the Teleop_Twist node from launching.
+      - Add `realsense2_camera:=False` to stop the RealSense Camera node from launching.
+   - For example, if you wanted to stop both the Command Exposer and Jetson_Comm nodes from launching, you'd use the command: `ros2 launch src/ManualRoverControlSystem/autolaunch/launch/auto_launch.py command_exposer:=False command_receiver:=False`
+   - If you're inside the Jetson container the command to accomplish the same task would look like this: `ros2 launch autolaunch/launch/auto_launch.py command_exposer:=False command_receiver:=False`
    
-      - At any time with the following command, you can stop the launch file by pressing `CTRL+C`. If you choose to launch all nodes at once, the output should look something like this:
+      - At any time with the following command, you can stop the launch file by pressing `CTRL+C`. If you choose to launch all nodes at once, the output should look something like this(in this example the realsense camera wasn't connected):
     
-      ``` [INFO] [launch]: All log files can be found below /root/.ros/log/2023-03-10-22-51-42-519396-2f922f3c3a13-19096
-      [INFO] [launch]: Default logging verbosity is set to INFO
-      [INFO] [joy_node-1]: process started with pid [19097]
-      [INFO] [XboxBroker-2]: process started with pid [19099]
-      [INFO] [CommandExposer-3]: process started with pid [19101]
-      [INFO] [CommandReceiver-4]: process started with pid [19103]
-      [CommandReceiver-4] [INFO] [1678488703.228953101] [CommandReceiver]: I have initialized up successfully.
-      ```
+      ```[[INFO] [launch]: All log files can be found below /root/.ros/log/2023-04-01-19-41-14-650243-docker-desktop-1043
+        [INFO] [launch]: Default logging verbosity is set to INFO
+        [INFO] [realsense2_camera_node-2]: process started with pid [1063]
+        [INFO] [joy_node-1]: process started with pid [1061]
+        [INFO] [XboxBroker-3]: process started with pid [1065]
+        [INFO] [CommandExposer-4]: process started with pid [1069]
+        [INFO] [CommandReceiver-5]: process started with pid [1073]
+        [realsense2_camera_node-2] [INFO] [1680378074.921175437] [camera.camera]: RealSense ROS v4.51.1
+        [realsense2_camera_node-2] [INFO] [1680378074.921306110] [camera.camera]: Built with LibRealSense v2.53.1
+        [realsense2_camera_node-2] [INFO] [1680378074.921340223] [camera.camera]: Running with LibRealSense v2.53.1
+        [realsense2_camera_node-2] [WARN] [1680378074.923078773] [camera.camera]: No RealSense devices were found!
+        [CommandReceiver-5] [INFO] [1680378074.966731093] [CommandReceiver]: I have initialized up successfully.
+        ```
       
 11. Navigate to another terminal panel.
 12. In the bottom panel, run `ros2 topic list`.
