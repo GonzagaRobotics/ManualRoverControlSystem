@@ -65,7 +65,7 @@ public:
     sub_lb = this->create_subscription<std_msgs::msg::Float32>("motor_command/left_shoulder", qos, callback_lb);
     sub_rb = this->create_subscription<std_msgs::msg::Float32>("motor_command/right_shoulder", qos, callback_rb);
     sub_dpad_lr = this->create_subscription<std_msgs::msg::Float32>("motor_command/dpad_lr", qos, callback_dpad_lr);
-    sub_pause = this->create_subscription<std_msgs::msg::Float32>("motor_command/dpad_lr", qos, callback_pause);
+    sub_pause = this->create_subscription<std_msgs::msg::Float32>("motor_command/pause", qos, callback_pause);
 
     // Quality of Service (QoS) profile for the publisher
     auto qos_pub = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default));

@@ -53,7 +53,7 @@ public:
         pub_left_shoulder_->publish(left_shoulder);
         pub_right_shoulder_->publish(right_shoulder);
         pub_dpad_lr_->publish(dpad_lr);
-        pub_pause -> publish(pause);
+        pub_pause_ -> publish(pause);
       };
 
     sub_ = this->create_subscription<sensor_msgs::msg::Joy>("joy",qos, callback);

@@ -60,7 +60,7 @@ class CommandReciever(Node):
                 'motor_command_exposed/right_trigger': self.create_publisher(Float32, 'motor_control/right_trigger', 10),
                 'motor_command_exposed/left_shoulder': self.create_publisher(Float32, 'motor_control/left_shoulder', 10),
                 'motor_command_exposed/right_shoulder': self.create_publisher(Float32, 'motor_control/right_shoulder', 10),
-                'motor_command_exposed/dpad_lr': self.create_publisher(Float32, 'motor_control/dpad_lr_publisher', 10),
+                'motor_command_exposed/dpad_lr': self.create_publisher(Float32, 'motor_control/dpad_lr', 10),
                 'motor_command_exposed/pause': self.create_publisher(Float32, 'motor_control/pause', 10)
                 }
 
@@ -88,7 +88,7 @@ class CommandReciever(Node):
     def dpad_lr_callback(self, msg):
         self.callback(msg, self.dpad_lr_topic)
 
-    def paue_callback(self, msg):
+    def pause_callback(self, msg):
         self.callback(msg, self.pause_topic)
 
     def callback(self, msg, topic):
