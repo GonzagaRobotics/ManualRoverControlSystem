@@ -18,6 +18,7 @@
 #include "rclcpp/rclcpp.hpp"
 // #include "sensor_msgs/msg/joy.hpp"
 #include <std_msgs/msg/float32_multi_array.hpp>
+#include <std_msgs/msg/float32.hpp>
 
 class CommandExposer : public rclcpp::Node
 {
@@ -27,28 +28,60 @@ public:
     // Quality of Service (QoS) profile for the subscription
     auto qos = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default));
 
-    // Subscribing to the "motor_command" topic
-    auto callback =
-      [this](const std_msgs::msg::Float32MultiArray::SharedPtr msg) -> void
+    // Subscribing to the "motor_command" topic(s)
+    auto callback_lt =
+      [this](const std_msgs::msg::Float32::SharedPtr msg) -> void
       {
-        // Don't modify the data here
-        // std_msgs::msg::Float32MultiArray unmodified_data = msg->data;
- 
-        // Publish the unmodified data to the "motor_command_exposed" topic
-        pub_->publish(*msg);
+        pub_lt_->publish(*msg);
+      };
+    auto callback_rt =
+      [this](const std_msgs::msg::Float32::SharedPtr msg) -> void
+      {
+        pub_rt_->publish(*msg);
+      };
+    auto callback_lb =
+      [this](const std_msgs::msg::Float32::SharedPtr msg) -> void
+      {
+        pub_lb_->publish(*msg);
+      };
+    auto callback_rb =
+      [this](const std_msgs::msg::Float32::SharedPtr msg) -> void
+      {
+        pub_rb_->publish(*msg);
+      };
+    auto callback_dpad_lr =
+      [this](const std_msgs::msg::Float32::SharedPtr msg) -> void
+      {
+        pub_dpad_lr_->publish(*msg);
       };
 
-    sub_ = this->create_subscription<std_msgs::msg::Float32MultiArray>("motor_command",qos, callback);
+    sub_lt = this->create_subscription<std_msgs::msg::Float32>("motor_command/left_trigger", qos, callback_lt);
+    sub_rt = this->create_subscription<std_msgs::msg::Float32>("motor_command/right_trigger", qos, callback_rt);
+    sub_lb = this->create_subscription<std_msgs::msg::Float32>("motor_command/left_shoulder", qos, callback_lb);
+    sub_rb = this->create_subscription<std_msgs::msg::Float32>("motor_command/right_shoulder", qos, callback_rb);
+    sub_dpad_lr = this->create_subscription<std_msgs::msg::Float32>("motor_command/dpad_lr", qos, callback_dpad_lr);
 
     // Quality of Service (QoS) profile for the publisher
     auto qos_pub = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default));
     // Creating the publisher for the "motor_command_exposed" topic
-    pub_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("motor_command_exposed", qos_pub);
+    pub_lt_ = this->create_publisher<std_msgs::msg::Float32>("motor_command_exposed/left_trigger", qos_pub);
+    pub_rt_ = this->create_publisher<std_msgs::msg::Float32>("motor_command_exposed/right_trigger", qos_pub);
+    pub_lb_ = this->create_publisher<std_msgs::msg::Float32>("motor_command_exposed/left_shoulder", qos_pub);
+    pub_rb_ = this->create_publisher<std_msgs::msg::Float32>("motor_command_exposed/right_shoulder", qos_pub);
+    pub_dpad_lr_ = this->create_publisher<std_msgs::msg::Float32>("motor_command_exposed/dpad_lr", qos_pub);
   }
 
 private:
-  rclcpp::Subscription<std_msgs::msg::Float32MultiArray>::SharedPtr sub_;
-  rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr pub_;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_lt;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_rt;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_lb;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_rb;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_dpad_lr;
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_lt_;
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_rt_;
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_lb_;
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_rb_;
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_dpad_lr_;
 };
 
 int main(int argc, char * argv[])
