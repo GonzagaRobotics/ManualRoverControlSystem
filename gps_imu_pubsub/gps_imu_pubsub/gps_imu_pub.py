@@ -1,54 +1,46 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+from std_msgs.msg import Float32
 import time
 
-class GPSNode(Node):
+class GPSIMUPub(Node):
 
     def __init__(self):
-        super().__init__('gps_node')
-        self.publisher_ = self.create_publisher(String, 'gps_coords', 10)
+        super().__init__('gps_imu_pub')
+        self.gps_lat_topic = "gps/lat"
+        self.gps_lng_topic = "gps/lng"
+        self.imu_pitch_topic = "imu/pitch"
+        self.imu_roll_topic = "imu/roll"
+        self.imu_yaw_topic = "imu/yaw"
+
+        self.gps_lat_pub = self.get_publisher(self.gps_lat_topic)
+        self.gps_lng_pub = self.get_publisher(self.gps_lng_topic)
+        self.imu_pitch_pub = self.get_publisher(self.imu_pitch_topic)
+        self.imu_roll_pub = self.get_publisher(self.imu_roll_topic)
+        self.imu_yaw_pub = self.get_publisher(self.imu_yaw_topic)
+
+        '''
+        self.publisher_ = self.create_publisher(String, gps_lat, 10)
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
+        '''
+    def get_publisher(self, topic):
+        topic_callback_lambda = lambda x : self.callback(x, topic)
+        return self.create_publisher(Float32, topic, 10)
 
     def timer_callback(self):
-        msg = String()
+        msg = Float32()
+        msg.data = 3.14
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.data)
-        self.i += 1
-
-class IMUNode(Node):
-
-    def __init__(self):
-        super().__init__('imu_node')
-        self.publisher_ = self.create_publisher(String, 'imu_vals', 10)
-        timer_period = 0.5  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
-        self.i = 0
-
-    def timer_callback(self):
-        msg = String()
-        self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
-        self.i += 1
 
 def main(args=None):
     rclpy.init(args=args)
-
-    gps_node = GPSNode()
-    imu_node = IMUNode()
-
-    try:
-        while True:
-         rclpy.spin_once(gps_node, timeout_sec=0.01)
-         rclpy.spin_once(imu_node, timeout_sec=0.01)
-         time.sleep(1)
-    except KeyboardInterrupt:
-        pass
-
-    gps_node.destroy_node()
-    imu_node.destroy_node()
+    node = GPSIMUPub()
+    rclpy.spin(node)
+    node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
