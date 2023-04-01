@@ -44,12 +44,16 @@ public:
         std_msgs::msg::Float32 dpad_lr;
         dpad_lr.data = msg->axes[6];
 
+        std_msgs::msg::Float32 pause;
+        pause.data = msg->buttons[7];
+
         // Publish the modified data to the "motor_command" topic
         pub_left_trigger_->publish(left_trigger);
         pub_right_trigger_->publish(right_trigger);
         pub_left_shoulder_->publish(left_shoulder);
         pub_right_shoulder_->publish(right_shoulder);
         pub_dpad_lr_->publish(dpad_lr);
+        pub_pause -> publish(pause);
       };
 
     sub_ = this->create_subscription<sensor_msgs::msg::Joy>("joy",qos, callback);
@@ -62,6 +66,7 @@ public:
     pub_left_shoulder_ = this->create_publisher<std_msgs::msg::Float32>("motor_command/left_shoulder", qos_pub);
     pub_right_shoulder_ = this->create_publisher<std_msgs::msg::Float32>("motor_command/right_shoulder", qos_pub);
     pub_dpad_lr_ = this->create_publisher<std_msgs::msg::Float32>("motor_command/dpad_lr", qos_pub);
+    pub_pause_ = this->create_publisher<std_msgs::msg::Float32>("motor_command/pause", qos_pub);
   }
 
 private:
@@ -71,6 +76,7 @@ private:
   rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_left_shoulder_;
   rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_right_shoulder_;
   rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_dpad_lr_;
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_pause_;
 };
 
 int main(int argc, char * argv[])
