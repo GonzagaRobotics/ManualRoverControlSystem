@@ -101,6 +101,20 @@ class DiagnosticsSubscriber(Node):
 
     def listener_callback(self,msg):
         self.get_logger().info('Received Diagnostics Data')
+class TfStaticSubscriber(Node):
+    def __init__(self):
+        super().__init__('tf_static_subscriber')
+        self.create_subscription(TFMessage, '/tf_static', self.listener_callback, 10)
+
+    def listener_callback(self,msg):
+        self.get_logger().info('Received Tf Static Data')
+class ParameterEventsSubscriber(Node):
+    def __init__(self):
+        super().__init__('parameter_events_subscriber')
+        self.create_subscription(ParameterEvent, '/parameter_events', self.listener_callback, 10)
+
+    def listener_callback(self,msg):
+        self.get_logger().info('Received Parameter Event')
 
 def main(args=None):
     rclpy.init(args=args)
@@ -116,6 +130,7 @@ def main(args=None):
     extrinsics_depth_to_color_subscriber = ExtrinsicsDepthToColorSubscriber()
     imu_subscriber = ImuSubscriber()
     diagnostics_subscriber = DiagnosticsSubscriber()
+    tf_static_subscriber = TfStaticSubscriber()
 
     executor = rclpy.executors.SingleThreadedExecutor()
     executor.add_node(aligned_depth_to_color_camera_info_subscriber)
@@ -130,7 +145,10 @@ def main(args=None):
     executor.add_node(extrinsics_depth_to_color_subscriber)
     executor.add_node(imu_subscriber)
     executor.add_node(diagnostics_subscriber)
-    
+    executor.add_node(parameter_events_subscriber)
+    executor.add_node(tf_static_subscriber)
+    parameter_events_subscriber.destroy_node()
+      
     try:
         executor.spin()
     finally:
