@@ -210,14 +210,16 @@ Steps to connect microcontroller to ROS2:
 1. ROS2 Terminal
 2. Latest version of Tmux: A link to a very useful guide can be found [here](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/).
 
-## Instructions
+## Instructions with microcontroller
 
 1. plug in and run the microcontroller that runs the GPS and IMU
-2. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`
-3. Run `cd ManualRoverControlSystem`
-4. Run `colcon build --packages-select gps_imu_pubsub`
-5. In one terminal run `ros2 run gps_imu_pubsub gps_imu_pub`
-6. In another terminal run `ros2 run gps_imu_pubsub gps_imu_sub`
+
+## Intructions with or without microcontroller
+
+1. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`
+2. Run `cd ManualRoverControlSystem`
+3. Run `colcon build --packages-select gps_imu_pubsub`
+4. Run `ros2 run gps_imu_pubsub gps_imu_sub`
 
 ## Timeline
 ### October 2022: 
