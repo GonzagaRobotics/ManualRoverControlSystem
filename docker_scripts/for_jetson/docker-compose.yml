@@ -13,6 +13,12 @@ services:
        dockerfile: docker_scripts/for_jetson/jetsonDockerfile
       network_mode: "host"
       pid: "host"
+      privileged: true
+      environment:
+        - DISPLAY=$DISPLAY
+      volumes:
+        - /tmp/.X11-unix:/tmp/.X11-unix
+        - $XDG_RUNTIME_DIR:/tmp/runtime-root
       command: tail -F anything # will run container forever
       depends_on:
         - micro-ros-agent
