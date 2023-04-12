@@ -210,6 +210,24 @@ Steps to connect microcontroller to ROS2:
 * A Manual Control System (MRCS) that allows a human operator to drive the rover and operate its various components. 
     - The MRCS will display important data transmitted from the rover including video stream and other data. 
 
+# Running the GPS and IMU data publisher and subscriber
+
+## Required Packages
+
+1. ROS2 Terminal
+2. Latest version of Tmux: A link to a very useful guide can be found [here](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/).
+
+## Instructions with microcontroller
+
+1. plug in and run the microcontroller that runs the GPS and IMU
+
+## Intructions with or without microcontroller
+
+1. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`
+2. Run `cd ManualRoverControlSystem`
+3. Run `colcon build --packages-select gps_imu_pubsub`
+4. Run `ros2 run gps_imu_pubsub gps_imu_sub`
+
 ## Timeline
 ### October 2022: 
 * Preliminary MRCS R&D complete: Architecture designed and framework(s) chosen for building, development started
