@@ -11,6 +11,8 @@ services:
       build: 
        context: ../..
        dockerfile: docker_scripts/for_jetson/jetsonDockerfile
+       args:
+         - LIBRS_VERSION=2.53.1
       network_mode: "host"
       pid: "host"
       command: tail -F anything # will run container forever
