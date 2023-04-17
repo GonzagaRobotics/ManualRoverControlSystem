@@ -108,8 +108,8 @@ RUN apt-get update && apt-get install -y ros-humble-diagnostic-updater
 # copying all folders
 RUN apt install git python3-colcon-common-extensions -y
 
-# perhaps install opencv as cannot find opencv
-RUN apt install libopencv-dev -y
+# perhaps install opencv  and boost as cannot find those
+RUN apt install libopencv-dev libboost-dev -y
 # for solving the missing cv2 bridge to ROS error
 RUN cd /app/ros2_ws
 RUN git clone https://github.com/ros-perception/vision_opencv.git -b humble
