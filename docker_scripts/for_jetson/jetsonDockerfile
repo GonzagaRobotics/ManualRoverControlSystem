@@ -112,7 +112,6 @@ RUN apt install git python3-colcon-common-extensions -y
 RUN apt install libopencv-dev libboost-dev -y
 # for solving the missing cv2 bridge to ROS error
 RUN cd /app/ros2_ws
-RUN git clone https://github.com/ros-perception/vision_opencv.git -b humble
 
 RUN source /opt/ros/humble/setup.bash && \
     cd /app/ros2_ws && \
