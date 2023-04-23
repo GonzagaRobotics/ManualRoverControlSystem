@@ -5,17 +5,8 @@ services:
         build:
             context: ../../
             dockerfile: docker_scripts/for_host/hostDockerfile
-            args:
-              - LIBRS_VERSION=2.53.1
-            target: librealsense
-
         devices:
           - /dev/input/js0:/dev/input/js0
-          - /dev:/dev
-          - /dev/video7:/dev/video7
-        device_cgroup_rules:
-          - "c 81:* rmw"
-          - "c 189:* rmw"
         privileged: true
         network_mode: "host"
         pid: "host"
