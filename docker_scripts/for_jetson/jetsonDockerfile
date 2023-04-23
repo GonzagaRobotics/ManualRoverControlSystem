@@ -109,7 +109,9 @@ RUN apt-get update && apt-get install -y ros-humble-diagnostic-updater
 RUN apt install git python3-colcon-common-extensions -y
 
 # perhaps install opencv  and boost as cannot find those
-RUN apt install libopencv-dev libboost-dev -y
+RUN apt install libopencv-dev \
+  libboost-python-dev \
+  ros-humble-image-transport -y
 # for solving the missing cv2 bridge to ROS error
 RUN cd /app/ros2_ws
 
