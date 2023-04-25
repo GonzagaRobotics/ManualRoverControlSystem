@@ -2,6 +2,11 @@
 A repository for developing the User Interface for receiving data and controlling the rover
 ## Packages Info
 
+* [Docker Containers for XBox controller Host and microcontroller with the Jetson](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/main#docker-containers-for-xbox-controller-host-and-microcontroller-with-the-jetson)
+* [Running the GPS and IMU data publisher and subscriber](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/main#running-the-gps-and-imu-data-publisher-and-subscriber)
+* [USB connection to Docker container](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/main#usb-connection-to-docker-container)
+* [Different branches in this repository](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/main#different-branches-in-this-repository)
+
 # Docker Containers for XBox controller Host and microcontroller with the Jetson
 
 This guide will show you how to set up and launch the MRCS (Manual Rover Control System) using Docker on a bash terminal
@@ -227,6 +232,12 @@ Steps to connect microcontroller to ROS2:
 2. Run `cd ManualRoverControlSystem`
 3. Run `colcon build --packages-select gps_imu_pubsub`
 4. Run `ros2 run gps_imu_pubsub gps_imu_sub`
+
+# Different branches in this repository
+* UI development branches: [ui_subscriber](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/ui_subscriber) and [dev-ui](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/dev-ui)
+* Camera display on Jetson: [IntelCamera-Flury](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/IntelCamera-Flury)
+* Camera display on Host: [jetson_message_broker](https://github.com/GonzagaRobotics/ManualRoverControlSystem/tree/jetson_message_broker)
+  * running the Realsense docker container in `docker_scripts/for_jetson`, use `docker compose up -d` in that folder to build the container
 
 ## Timeline
 ### October 2022: 
