@@ -25,22 +25,8 @@ def generate_launch_description():
         'telop_twist_joy',
         default_value='True',
         description='Whether to launch the Teleop Twist node')
-    declare_realsense2_camera_cmd = DeclareLaunchArgument(
-        'realsense2_camera',
-        default_value='True',
-        description='Whether to launch the realsense2_camera node')
     
-    declare_camerasub_cmd = DeclareLaunchArgument(
-        'camerasub',
-        default_value='True',
-        description='Whether to launch the realsense_sub node')
-    
-    camerasub = Node(
-            package='camerasub',
-            executable='subber',
-            name='subber',
-            condition=IfCondition(LaunchConfiguration('camerasub'))
-        )
+       
     # Include teleop_twist_joy.launch.py with arguments for joy_config and joy_dev
     telop_twist_joy = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
@@ -50,14 +36,7 @@ def generate_launch_description():
             condition=IfCondition(LaunchConfiguration('telop_twist_joy'))
       )
     # Include rs_launch.py with arguments
-    realsense2_camera = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('realsense2_camera'), 'launch'),
-            '/rs_launch.py']),
-            #launch_arguments={'depth_module.profile':'640x480x30'}.items(),
-            condition=IfCondition(LaunchConfiguration('realsense2_camera'))
-            
-      )
+   
 
     # Define XboxBroker node with conditional launching based on command line argument value
     xbox_broker = Node(
@@ -91,11 +70,7 @@ def generate_launch_description():
         declare_command_exposer_cmd,
         declare_command_receiver_cmd,
         declare_telop_twist_joy_cmd,
-        declare_realsense2_camera_cmd,
-        declare_camerasub_cmd,
         telop_twist_joy,
-        realsense2_camera,
-        camerasub,
         xbox_broker,
         command_exposer,
         command_receiver,
