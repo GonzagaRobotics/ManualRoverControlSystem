@@ -102,7 +102,7 @@ This guide will show you how to set up and launch the MRCS (Manual Rover Control
 2. Create a new directory named `ros2_ws` with a subdirectory called `src` using `mkdir -p ros2_ws/src`.
 3. Navigate to `src` by running `cd ros2_ws/src`.
 4. Clone the latest version of the MRCS repo using `git clone git@github.com:GonzagaRobotics/ManualRoverControlSystem.git`.
-5. Navigate out of `src` in the top of the directory `ros2_ws` by running the command `cd ros2_ws`.
+5. Navigate out of `src`.
 6. Build the project by running `colcon build`.
    - If you encounter the error message `stderr: teleop_twist_joy`, run `colcon build` again to resolve it.
 7. Source ROS2 in the parent directory by running the command: `. install/setup.bash`.
